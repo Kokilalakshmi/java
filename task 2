@@ -1,0 +1,32 @@
+import java.util.Scanner;
+class SumofnElmts{
+public static void main (String []args){
+	Scanner s1=new Scanner(System.in);
+    System.out.println("Enter the total numbers");
+	int n=s1.nextInt();
+int[] arr=new int[n];
+ System.out.println("Enter the values");
+for (int i=0;i<n;i++){
+	arr[i]=s1.nextInt();
+}
+    System.out.println("Enter the sum value");
+	int s=s1.nextInt();
+	int sum=0;
+	int total=0;
+	int temp=0;
+	int a;
+for (int i=0;i<n;i++){
+	sum=0;
+	temp=arr[i];
+	while(temp>0){
+	a=temp%10;
+	sum=sum+a;
+	temp=temp/10;
+	}
+	if(sum==s){
+	total=total+arr[i];  	
+	}
+}
+  System.out.println(total);
+}
+}
